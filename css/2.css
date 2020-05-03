@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+ul ol{
+    list-style: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*[data-x].active{*/
+    /*border: 3px  #e06567 solid;*/
+
+/*}*/
+
+body{
+    background-color: #efefef;
+}
+
+.topNavBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 1s;
+    padding: 20px 0;
+}
+
+.topAnimation{
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+    padding: 10px 0;
+    color: #3d4451;
+}
+
+.topNavBar > .topNavBarSon{
+    margin-top: 7px ;
+}
+.topNavBar > .topNavBarSon > .logo{
+    float: left;
+    font-family: "Arial Black";
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.topNavBar > .topNavBarSon > .logo > .rs{
+    color: #e6686a;
+    margin-right: 6px;
+}
+
+.topNavBar > .topNavBarSon > .logo > .card{
+    color: #9a9da2;
+}
+
+.topNavBar > .topNavBarSon > .topList{
+    /*line-height: 37px;*/
+    margin-right: 30px;
+    float: right;
+}
+
+.topNavBar > .topNavBarSon > .topList > li{
+    margin-right: 17px;
+    margin-left: 17px;
+    display: inline;
+}
+
+.topNavBar > .topNavBarSon > .topList > li > a{
+    color: #b7b7b7;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+.topNavBar > .topNavBarSon > .topList > li.active > a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e06567;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    animation: topDongHua .5s;
+}
+.topNavBar > .topNavBarSon > .topList > li> a:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e06567;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    animation: topDongHua .5s;
+}
+@keyframes topDongHua {
+    0%{
+        width: 0%;
+    }
+   100%{
+        width: 100%;
+    }
+}
+
+.banner{
+    height: 515px;
+    background-image: url('../img/rs-cover.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner > .mask{
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+main > .userCard{
+    height: 523px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    /*border: 1px red solid;*/
+    position: relative;
+    margin-top: -350px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+main > .userCard > .pictureAndText{
+    padding: 50px;
+}
+
+main > .userCard > .pictureAndText > .userPicture{
+    float: left;
+}
+
+main > .userCard > .pictureAndText > .userIntroduce{
+    float: right;
+    margin-left: 71px;
+    width: 470px;
+}
+
+main > .userCard > .pictureAndText > .userIntroduce > h1{
+    font-size: 2em;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+main > .userCard > .pictureAndText > .userIntroduce > hr{
+    height: 0;
+    border: none;
+    border-top: 1px #dedede solid;
+    margin: 20px 0;
+}
+main > .userCard > .pictureAndText > .userIntroduce > dl{
+    display: block;
+}
+main > .userCard > .pictureAndText > .userIntroduce > dl dt{
+    display: block;
+    float: left;
+    padding: 5px 0;
+}
+
+main > .userCard > .pictureAndText > .userIntroduce > dl dd{
+    /*float: right;*/
+    display: block;
+    padding: 5px 0;
+    margin-inline-start: 140px;
+}
+
+main > .userCard > .media{
+    position: absolute;
+    bottom: 0;
+    height: 72px;
+    width: 100%;
+    background-color: #e6686a;
+    text-align: center;
+}
+
+main > .userCard > .media > a{
+    display: inline-block;
+    height: 30px;
+    width:40px;
+    margin: 16px;
+    padding: 5px 0;
+
+}
+main > .userCard > .media > a svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+main > .downPdf{
+    width:200px;
+    height: 50px;
+    border: 1px #cdcfd1 solid;
+    background-color: #efefef;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: box-shadow 0.2s;
+    font-weight: bold;
+    font-size: 12px;
+
+}
+main > .downPdf > a{
+    line-height: 50px;
+    color: #3d4451;
+}
+
+main > .downPdf:hover{
+    box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+main > .myselfIntroduce{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+main > .skill > h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+main> .skill > ul{
+    background: white;
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+    list-style: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 840px;
+}
+main > .skill > ul > li {
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+    margin-right: 16px;
+}
+
+main > .skill .progress {
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+main > .skill .progress > .progressBar {
+    height: 100%;
+    background: #E6686A;
+    width: 70%;
+    border-radius: 2px;
+}
+
+main > .sampleReels .sampleText{
+    text-align: center;
+    font-weight: bold;
+    color: #3d4451;
+    font-size: 34px;
+    margin-top: 50px;
+}
+
+main > .sampleReels ul{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 235px;
+    margin-top: 30px;
+}
+
+main > .sampleReels ul li{
+    float: left;
+    cursor: pointer;
+}
+
+main > .sampleReels ul li:nth-child(1){
+    margin-right: 40px;
+}
+
+main > .sampleReels ul li:nth-child(2){
+    margin-right: 40px;
+}
+
+main > .sampleReels > #option{
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+main > .sampleReels #option > .optionSelect{
+    height: 100%;
+    /*width: 30%;*/
+    background-color: #E6686A;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+main > .sampleReels  > .optionSelect1 .optionSelect{
+    margin-left: 0;
+    width: 32px;
+}
+
+main > .sampleReels  > .optionSelect2 .optionSelect{
+    margin-left: 72px;
+    width: 32px;
+}
+
+main > .sampleReels  > .optionSelect3 .optionSelect{
+    margin-left:144px;
+    width: 96px;
+}
+
+main > .sampleReels .imgs{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+main > .sampleReels .imgs > .img1{
+    float: left;
+}
+
+main > .sampleReels .imgs > .img2{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+main > .sampleReels .imgs > .img3{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.rotation{
+    position: relative;
+    height: 500px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.rotation ul{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.rotation ul li{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    list-style: none;
+    font-size: 100px;
+    opacity: 0;
+    color: blueviolet;
+    transition: all 1s;
+}
+
+.rotation > ul li:nth-child(1){
+    background-color: #e06567;
+}
+.rotation > ul li:nth-child(2){
+    background-color: #00FFFF;
+}
+
+.rotation > ul li:nth-child(3){
+    background-color: red;
+}
+.rotation > ul li:nth-child(4){
+    background-color: yellow;
+}
+.rotation > ul li:nth-child(5){
+    background-color: darkorange;
+}
+
+.rotation > .rotationLists .rotationList.active{
+    z-index: 5;
+    opacity: 1;
+}
+.rotation > button{
+    z-index: 10;
+    height: 90px;
+    width: 45px;
+    background-color: rgba(0,0,0,.0);
+    font-size: 60px;
+    font-weight: bold;
+    border: 0;
+    color:  white;
+
+}
+
+.rotation > button:hover{
+    font-size: 80px;
+}
+.rotation > .buttonPre{
+    position: absolute;
+    left: 0;
+    top:250px;
+}
+
+.rotation > .buttonAfter{
+    position: absolute;
+    right: 0;
+    top:250px;
+}
+.rotation > .pointLists{
+    position: absolute;
+    bottom: 15px;
+    left: 420px;
+    z-index: 10;
+
+}
+.rotation > .pointLists li{
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.2);
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.rotation > .pointLists > .point.active{
+    background-color: rgba(0,0,0,.6);
+}
+
+.message{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+.message h2{
+    text-align: center;
+}
+
+.message ul{
+    list-style: none;
+    border-top: 1px #dedede solid;
+}
+
+.message ul li{
+    border-bottom: 1px #dedede solid;
+    height: 50px;
+    line-height: 50px;
+}
+.message #postMessage{
+    margin-top: 50px;
+}
+.message #postMessage input{
+    margin-right: 50px;
+
+}
