@@ -452,7 +452,7 @@ main > .sampleReels .imgs > .img3{
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 
 }
 .message h2{
@@ -470,9 +470,60 @@ main > .sampleReels .imgs > .img3{
     line-height: 50px;
 }
 .message #postMessage{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .message #postMessage input{
     margin-right: 50px;
 
+}
+
+.contactWay{
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.contactWay .contact:hover{
+    box-shadow: 1px 3px 5px 1px rgba(0,0,0,.5);
+    font-size: 50px;
+    animation: contactAnimotion 2s;
+}
+.contactWay .contact{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color:  #e6686a;
+    color: white;
+    font-weight: bold;
+    transition: all 2s;
+}
+
+@keyframes contactAnimotion {
+    0%{
+        background-color: #e6686a;
+    }
+    25%{
+        background-color: palegreen;
+    }
+    50%{
+         background-color: orchid;
+     }
+    75%{
+          background-color: springgreen;
+      }
+    100%{
+           background-color: #e6686a;
+       }
+}
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    line-height: 50px;
 }
